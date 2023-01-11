@@ -17,6 +17,6 @@ sgx.nonpie_binary = true
 
 sgx.trusted_files = [
   "file:{{ gramine.libos }}",
-  "file:helloworld",
+  "file:/release/vault",
   "file:{{ gramine.runtimedir() }}/",
 ]
