@@ -14,7 +14,11 @@ ifeq ($(SGX),1)
 all: vault.manifest.sgx vault.sig vault.token
 endif
 
-vault: release/vault
+vault: vault release/vault
+	cp release/vault .
+
+release/vault: release/vault
+	cd release && wget https://releases.hashicorp.com/vault/1.12.2/vault_1.12.2_linux_amd64.zip && unzip vault_1.12.2_linux_amd64.zip
 
 vault.manifest: vault.manifest.template
 	gramine-manifest \

@@ -8,7 +8,7 @@ loader.env.LD_LIBRARY_PATH = "/lib"
 
 fs.mounts = [
   { path = "/lib", uri = "file:{{ gramine.runtimedir() }}" },
-  { path = "/vault", uri = "file:/release/vault" },
+  { path = "/vault", uri = "file:vault" },
 ]
 
 sgx.debug = true
@@ -17,6 +17,6 @@ sgx.nonpie_binary = true
 
 sgx.trusted_files = [
   "file:{{ gramine.libos }}",
-  "file:/release/vault",
+  "file:vault",
   "file:{{ gramine.runtimedir() }}/",
 ]
