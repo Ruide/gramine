@@ -17,6 +17,7 @@ sgx.debug = true
 sgx.edmm_enable = {{ 'true' if env.get('EDMM', '0') == '1' else 'false' }}
 sgx.nonpie_binary = true
 sgx.max_threads = 32
+sgx.thread_num = 32
 
 sgx.enclave_size = "8G"
 
