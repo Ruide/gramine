@@ -2,7 +2,7 @@
 
 loader.entrypoint = "file:{{ gramine.libos }}"
 libos.entrypoint = "/vault"
-loader.argv = ["vault", "server", "-dev", "-dev-no-store-token", "-dev-root-token-id", "mytoken"]
+loader.argv = ["vault", "server", "-dev", "-dev-no-store-token", "-dev-root-token-id", "mytoken", "-dev-listen-address=0.0.0.0:8200"]
 
 loader.log_level = "{{ log_level }}"
 
